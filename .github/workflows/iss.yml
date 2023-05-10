@@ -1,16 +1,14 @@
-name: Deploy Proje
-on: push 
+name: New Issue Workflow
+on:
+  issues:
+    types: [opened]
+
 jobs:
-  lint:
-    runs-on: ubuntu-latest 
+  newIssueJob:
+    runs-on: ubuntu-latest
     steps:
-      - name: get Code 
-        uses: actions/checkout@v3
-      - name: install dep
-        run: npm ci 
-      - name: lint
-        run: npm run lint 
-      - name: test
-        run: npm run test 
-      - name: deply
-        run: echo "deploy ${{toJSON(github)}}"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Print Issue Title
+        run: echo "New issue created: ${{ github.event.issue.title }}"
+
