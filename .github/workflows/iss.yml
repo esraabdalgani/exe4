@@ -1,7 +1,5 @@
 name: New Issue Workflow
-on:
-  issues:
-    types: [opened]
+on: push
 
 jobs:
   newIssueJob:
