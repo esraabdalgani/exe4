@@ -1,7 +1,10 @@
 name: info 
 on: 
   issues:
-    types: [opened]
+    types: [opened,edited]
+  push:
+    branches:
+      - master
 jobs:
   info:
     runs-on: ubuntu-latest
