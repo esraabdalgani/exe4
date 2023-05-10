@@ -1,5 +1,5 @@
 name: info 
-on: issues
+on: push
 jobs:
   info:
     runs-on: ubuntu-latest
@@ -7,4 +7,4 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: info
-        run: echo "${{ toJSON(github) }}"
+        run: echo " ${{ toJSON(github) }} "
