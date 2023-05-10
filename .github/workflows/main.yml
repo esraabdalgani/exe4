@@ -1,5 +1,5 @@
 name: info 
-on: push
+on: issues
 jobs:
   info:
     runs-on: ubuntu-latest
