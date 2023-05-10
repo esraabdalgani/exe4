@@ -1,0 +1,16 @@
+name: Deploy Project 
+on: push 
+jobs:
+  lint:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: get Code 
+      uses: actions/checkout@v3
+    - name: install dep
+      uses: npm ci 
+    - name: lint
+      run: npm run lint 
+    - name: test
+      run: npm run test 
+    - name: deply
+      run: echo "deploy ${{toJSON(github)}}"
