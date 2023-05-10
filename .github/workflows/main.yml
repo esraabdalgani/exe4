@@ -1,5 +1,7 @@
 name: info 
-on: issues
+on:
+  issues:
+    types: [opened, edited, milestoned]
 jobs:
   info:
     runs-on: ubuntu-latest
