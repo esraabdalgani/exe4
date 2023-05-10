@@ -7,7 +7,7 @@ jobs:
       - name: get Code 
         uses: actions/checkout@v3
       - name: install dep
-        uses: npm ci 
+        run: npm ci 
       - name: lint
         run: npm run lint 
       - name: test
