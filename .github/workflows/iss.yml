@@ -1,16 +1,10 @@
-name: Deploy Project 
-on: push 
+name: New Issue Workflow
+on: issues
+
 jobs:
-  lint:
-    runs-on: ubuntu-latest 
+  newIssueJob:
+    runs-on: ubuntu-latest
     steps:
-      - name: get Code 
+      - name: Checkout code
         uses: actions/checkout@v3
-      - name: install dep
-        run: npm ci 
-      - name: lint
-        run: npm run lint 
-      - name: test
-        run: npm run test 
-      - name: deply
-        run: echo "deploy ${{toJSON(github)}}"
+
